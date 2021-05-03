@@ -36,9 +36,7 @@ int main(void) {
 		cin >> buff;
 		queries.push_back(buff);
 	}
-
 	
-	auto start = high_resolution_clock::now();
 	for (int i = 0; i < queries.size(); i++) {
 		std::cout << highest[queries[i]] + 1 << " ";
 		for (int j = 0; j < sizeof(highest)/sizeof(highest[0]); j++) {
@@ -47,9 +45,6 @@ int main(void) {
 		}
 		highest[queries[i]] = 0;
 	}
-	auto finish = high_resolution_clock::now();
-	auto duration = duration_cast<milliseconds>(finish - start);
-	cout << duration.count() << endl;
 
 	cout << endl;
 	//system("pause");
